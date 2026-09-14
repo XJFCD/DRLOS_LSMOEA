@@ -28,10 +28,10 @@ problem. From the command line:
 
 ```matlab
 % 2-objective LSMOP1, D = 500, N = 300, maxFE = 1e5
-platemo('algorithm', @DRLOS_LSMOEA, 'problem', @LSMOP1, 'M', 2, 'D', 500, 'N', 300, 'maxFE', 1e5);
+platemo('algorithm', @DRLOS_LSMOEA, 'problem', @LSMOP1, 'M', 2, 'D', 500, 'N', 300, 'maxFE', 100000);
 
 % 2-objective UF1, D = 1000
-platemo('algorithm', @DRLOS_LSMOEA, 'problem', @UF1,  'M', 2, 'D', 1000, 'N', 300, 'maxFE', 1e5);
+platemo('algorithm', @DRLOS_LSMOEA, 'problem', @UF1,  'M', 2, 'D', 1000, 'N', 300, 'maxFE', 100000);
 ```
 
 ## Repository layout
