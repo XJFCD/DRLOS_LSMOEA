@@ -20,17 +20,14 @@ function [Population,Fitness,Next] = EnvironmentalSelection(Population,N,isOrigi
     %% Environmental selection
     Next = Fitness < 1;
 
-    % 获取当前种群大小
     currentSize = length(Population);
 
     if sum(Next) < N
         [~,Rank] = sort(Fitness);
         selectableCount = min(N, length(Rank));
         Next(Rank(1:selectableCount)) = true;
-        % 如果还需要更多解
         if selectableCount < N
             remainingNeeded = N - selectableCount;
-            % 从剩余解中选择适应度最好的
             remainingIndices = setdiff(1:currentSize, Rank(1:selectableCount));
             if ~isempty(remainingIndices)
                 [~, remainingRank] = sort(Fitness(remainingIndices));
@@ -44,16 +41,13 @@ function [Population,Fitness,Next] = EnvironmentalSelection(Population,N,isOrigi
         Next(Temp(Del)) = false;
     end
 
-    % 确保最终选择的解数量正好是N（新增）
     currentCount = sum(Next);
     if currentCount < N
-        % 补充选择其他解
         remainingIndices = find(~Next);
         [~, rank] = sort(Fitness(remainingIndices));
         needed = N - currentCount;
         Next(remainingIndices(rank(1:min(needed, length(remainingIndices))))) = true;
     elseif currentCount > N
-        % 如果还是太多，再次截断
         Del = Truncation(Population(Next).objs, currentCount - N);
         Temp = find(Next);
         Next(Temp(Del)) = false;
