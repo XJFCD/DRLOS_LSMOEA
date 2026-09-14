@@ -49,6 +49,6 @@ function [net, Params] = trainmodel(tr_x, tr_y, Params)
         idx = idx_all(start_idx:end_idx);
         x_batch(:,:) = tr_x(idx, :);
         y_batch(:,:) = tr_y(idx, :);
-        net = trainNet_fast(x_batch, y_batch, Params, net);
+        net = trainNet(x_batch, y_batch, Params, net);
     end
 end
