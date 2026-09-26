@@ -11,9 +11,6 @@ function Pop = DoubleReproduction(Problem,Pop,GuidingSolution,RefV)
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-% This function is written by Shufen Qin
-% E-mail: shufen.qin@stu.tyust.edu.cn
-
     %% The First Phase
     OffPopX = GAonce(Problem,Pop.decs,GuidingSolution.decs); 
     OffPopX = unique(OffPopX,'rows'); 
