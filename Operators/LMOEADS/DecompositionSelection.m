@@ -10,9 +10,6 @@ function Population = DecompositionSelection(Global,Population,associate,Cosinem
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-% This function is written by Shufen Qin
-% E-mail: shufen.qin@stu.tyust.edu.cn
-
     np = length(Population);
     %% Normalization
     Obj = Population.objs;
