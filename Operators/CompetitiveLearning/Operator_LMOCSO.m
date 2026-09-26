@@ -1,6 +1,4 @@
 function [OffDec,OffVel] = Operator_LMOCSO(Problem,Loser,Winner,Rate)
-%  Copyright (C) 2021 Xu Yang
-%  Xu Yang <xuyang.busyxu@qq.com> or <xuyang369369@gmail.com>
 
     %% Parameter setting
     LoserDec  = Loser.decs; 
