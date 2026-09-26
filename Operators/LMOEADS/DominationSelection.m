@@ -10,9 +10,6 @@ function [Population,FrontNo,CrowdDis] = DominationSelection(Global,Population)
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-% This function is written by Shufen Qin
-% E-mail: shufen.qin@stu.tyust.edu.cn
-
     %% Non-dominated sorting
     [FrontNo,MaxFNo] = NDSort(Population.objs,Global.N);
     Next = false(1,length(FrontNo));
