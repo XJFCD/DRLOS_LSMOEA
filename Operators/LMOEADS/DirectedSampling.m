@@ -10,9 +10,6 @@ function GuidingSolution = DirectedSampling(Problem,Population,Ns,Nw,RefV)
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-% This function is written by Shufen Qin
-% E-mail: shufen.qin@stu.tyust.edu.cn
-
     %% Classter the reference vectors
     BoundRefV               = eye(Problem.M);
     BoundRefV(BoundRefV==0) = 10e-7;
