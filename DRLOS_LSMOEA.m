@@ -1,10 +1,5 @@
 classdef DRLOS_LSMOEA < ALGORITHM
-    % <multi/many> <real> <large> 
-    % A Deep Reinforcement Learning-Assisted Operator Selection for Large-Scale Multi-Objective Optimization
-    %------------------------------- Reference --------------------------------
-    % Q. Lin, J. Li, S. Liu, et al., An Adaptive Two-Stage Evolutionary
-    % Algorithm for Large-Scale Continuous Multi-Objective Optimization, Swarm and
-    % Evolutionary Computation, 2023.
+
     %------------------------------- Copyright --------------------------------
     % Copyright (c) 2021 BIMK Group. You are free to use the PlatEMO for
     % research purposes. All publications which use this platform or any code
