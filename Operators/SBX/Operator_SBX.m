@@ -1,6 +1,4 @@
 function Offspring = Operator_SBX(Population, Problem, proC, disC)
-% Migrated from the PlatEMO OperatorGA module for convenience
-% This function is written by Ian Meyer Kropp
     if isa(Population(1), 'SOLUTION')
         evaluated = true;
         Parent = Population.decs;
